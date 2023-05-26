@@ -1,0 +1,150 @@
+Request method:	GET
+Request URI:	https://demo.testfire.net/api/account/800003
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	accountNo=800003
+Headers:		Authorization=YW5OdGFYUm86WkdWdGJ6RXlNelE9OnceRj9uRz8=
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: application/json
+Content-Length: 1895
+Date: Fri, 26 May 2023 05:59:09 GMT
+
+{
+    "accountId": "800003",
+    "balance": "$2605828369718738000000.00",
+    "credits": [
+        {
+            "date": "2004-12-29",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-12",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-29",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-02-12",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-03-01",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-03-15",
+            "amount": "1200",
+            "description": "Paycheck",
+            "account": "1001160140"
+        }
+    ],
+    "debits": [
+        {
+            "date": "2005-01-17",
+            "amount": "2.85",
+            "description": "Withdrawal",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-25",
+            "amount": "800",
+            "description": "Rent",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-27",
+            "amount": "45.25",
+            "description": "Electric Bill",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-28",
+            "amount": "29.99",
+            "description": "Heating",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-29",
+            "amount": "321",
+            "description": "Transfer to Savings",
+            "account": "1001160140"
+        },
+        {
+            "date": "2005-01-29",
+            "amount": "19.6",
+            "description": "Groceries",
+            "account": "1001160140"
+        }
+    ],
+    "last_10_transactions": [
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Deposit",
+            "ammount": "$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Withdrawal",
+            "ammount": "-$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Deposit",
+            "ammount": "$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Withdrawal",
+            "ammount": "-$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Deposit",
+            "ammount": "$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Withdrawal",
+            "ammount": "-$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Deposit",
+            "ammount": "$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Withdrawal",
+            "ammount": "-$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Deposit",
+            "ammount": "$1234.00"
+        },
+        {
+            "date": "2023-05-26",
+            "transaction_type": "Withdrawal",
+            "ammount": "-$1234.00"
+        }
+    ]
+}

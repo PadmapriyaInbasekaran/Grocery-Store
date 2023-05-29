@@ -1,0 +1,32 @@
+Request method:	GET
+Request URI:	http://simple-grocery-store-api.online/products/4643
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	productId=4643
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+server: Fly/fe06e9419 (2023-05-24)
+fly-request-id: 01H1M021NRP0YH3TYKE6NF1AAP-bom
+date: Mon, 29 May 2023 14:54:38 GMT
+content-type: application/json; charset=utf-8
+x-powered-by: Express
+etag: W/"9f-HOV8MpLmQj4WLcZExQr2z/Z8zWc"
+content-encoding: gzip
+transfer-encoding: chunked
+via: 1.1 fly.io
+
+{
+    "id": 4643,
+    "category": "coffee",
+    "name": "Starbucks Coffee Variety Pack, 100% Arabica",
+    "manufacturer": "Starbucks",
+    "price": 40.91,
+    "current-stock": 14,
+    "inStock": true
+}

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TestSuite">
-    <test name="TestFire API">
+<suite name="TestSuite" parallel="tests" thread-count="3">
+    <test name="GroceryStoreApi">
         <classes>
-            <class name="api.test.TestFireTest"/>
+            <class name="api.test.GroceryStoreTestS1"/>
+            <class name="api.test.GroceryStoreTestS2"/>
+            <class name="api.test.GroceryStoreTestS3"/>
         </classes>
     </test>
 </suite>

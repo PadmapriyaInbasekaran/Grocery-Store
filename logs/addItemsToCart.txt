@@ -1,0 +1,29 @@
+Request method:	POST
+Request URI:	http://simple-grocery-store-api.online/carts/gFP2ryOYhDCeAzHfcPkiQ/items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	cartId=gFP2ryOYhDCeAzHfcPkiQ
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    
+}
+HTTP/1.1 400 Bad Request
+server: Fly/fe06e9419 (2023-05-24)
+fly-request-id: 01H1KVWKDEBBPEN6A3QQZT5XT5-maa
+date: Mon, 29 May 2023 13:41:45 GMT
+content-type: application/json; charset=utf-8
+x-powered-by: Express
+etag: W/"29-oQj3XplkY+x83s6gzA5XvjIR5gM"
+content-encoding: gzip
+transfer-encoding: chunked
+via: 1.1 fly.io
+
+{
+    "error": "Invalid or missing productId."
+}

@@ -53,7 +53,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2023-05-26 11:29:19</span>
+					<span class='suite-started-time'>2023-05-29 20:24:42</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 22s+432ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 7s+594ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 22s+432ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 7s+594ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2023-05-26 11:28:57</span> 
+							<span class='panel-lead suite-started-time'>2023-05-29 20:24:34</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2023-05-26 11:29:19</span> 
+							<span class='panel-lead suite-ended-time'>2023-05-29 20:24:42</span> 
 						</div> 
 					</div>
 				</div>
@@ -206,6 +206,7 @@
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
@@ -237,19 +238,19 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='4a3feb8b-dfd4-4a11-9019-93379c29c218'>
+										<li class='collection-item test displayed active unknown ' extentid='7cdc3531-0454-4ff1-aeec-66872ad929cc'>
 											<div class='test-head'>
-												<span class='test-name'>TestFireTest::createToken </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>GroceryStoreTestS3::getAProduct </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:28:57</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:01</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+489ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-29 20:24:35</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-29 20:24:39</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+883ms</span>
 												</div>
-												<div class='test-desc'>createToken</div>
+												<div class='test-desc'>getAProduct</div>
 												<div class='test-attributes'>
 												</div>
 												<div class='test-steps'>
@@ -258,16 +259,46 @@
 															<tr>
 																<th>Status</th>
 																<th>Timestamp</th>
-																	<th>StepName</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='6187ee2f-d45e-4fe2-8069-9f3c65a9b226'>
+											<div class='test-head'>
+												<span class='test-name'>GroceryStoreTestS3::createNewCart </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-29 20:24:39</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-29 20:24:40</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+54ms</span>
+												</div>
+												<div class='test-desc'>createNewCart</div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
 																<th>Details</th>
 															</tr>
 														</thead>
 														<tbody>
 																<tr>
 																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:01</td>
-																		<td class='step-name'>Token generated successfully!</td>
-																	<td class='step-details'>YW5OdGFYUm86WkdWdGJ6RXlNelE9OnceRj9uRz8=</td>
+																	<td class='timestamp'>20:24:40</td>
+																	<td class='step-details'>Cart created successfully!</td>
 																</tr>
 														</tbody>
 													</table>
@@ -276,19 +307,19 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='6e657f15-7f69-4dbe-a269-1c0b90b13942'>
+										<li class='collection-item test displayed active pass ' extentid='868872fa-e8a1-4fc9-81f8-66ec6e873182'>
 											<div class='test-head'>
-												<span class='test-name'>TestFireTest::verifyLogin </span>
+												<span class='test-name'>GroceryStoreTestS3::addAnItemToCart </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:01</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:03</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+33ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-29 20:24:40</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-29 20:24:40</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+757ms</span>
 												</div>
-												<div class='test-desc'>verifyLogin</div>
+												<div class='test-desc'>addAnItemToCart</div>
 												<div class='test-attributes'>
 												</div>
 												<div class='test-steps'>
@@ -303,13 +334,8 @@
 														<tbody>
 																<tr>
 																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:03</td>
-																	<td class='step-details'>User created successfully!</td>
-																</tr>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:03</td>
-																	<td class='step-details'>User logged in successfully!</td>
+																	<td class='timestamp'>20:24:40</td>
+																	<td class='step-details'>Items Added To Cart successfully!</td>
 																</tr>
 														</tbody>
 													</table>
@@ -318,19 +344,19 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='88263ee8-ac91-4998-bd72-603a0890acb1'>
+										<li class='collection-item test displayed active pass ' extentid='54fec3f4-4c21-4bca-ae4b-2297d3d0ff93'>
 											<div class='test-head'>
-												<span class='test-name'>TestFireTest::listUserAccounts </span>
+												<span class='test-name'>GroceryStoreTestS3::replaceCartItem </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:03</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:08</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+352ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-29 20:24:40</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-29 20:24:41</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+842ms</span>
 												</div>
-												<div class='test-desc'>listUserAccounts</div>
+												<div class='test-desc'>replaceCartItem</div>
 												<div class='test-attributes'>
 												</div>
 												<div class='test-steps'>
@@ -345,8 +371,8 @@
 														<tbody>
 																<tr>
 																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:08</td>
-																	<td class='step-details'>Listed all user accounts successfully!</td>
+																	<td class='timestamp'>20:24:41</td>
+																	<td class='step-details'>Items updated in Cart successfully!</td>
 																</tr>
 														</tbody>
 													</table>
@@ -355,19 +381,19 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='4c5de01b-3370-4198-a056-8962801bc6ae'>
+										<li class='collection-item test displayed active pass ' extentid='e8dd3df1-8275-423d-9262-30e9bcf2054d'>
 											<div class='test-head'>
-												<span class='test-name'>TestFireTest::getCheckingAccountDetails </span>
+												<span class='test-name'>GroceryStoreTestS3::getCartItems </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:08</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:09</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+331ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-29 20:24:41</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-29 20:24:42</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+446ms</span>
 												</div>
-												<div class='test-desc'>getCheckingAccountDetails</div>
+												<div class='test-desc'>getCartItems</div>
 												<div class='test-attributes'>
 												</div>
 												<div class='test-steps'>
@@ -382,230 +408,8 @@
 														<tbody>
 																<tr>
 																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:09</td>
-																	<td class='step-details'>Checking account details displayed successfully!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='fcb7aa6c-915e-4406-a14d-8554e3182277'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::getCreditCardAccountDetails </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:09</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:10</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+395ms</span>
-												</div>
-												<div class='test-desc'>getCreditCardAccountDetails</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:10</td>
-																	<td class='step-details'>Credit card account details displayed successfully!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='64629d71-0685-4d70-9368-65a5faeb8260'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::getSavingsAccountDetails </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:10</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:12</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+595ms</span>
-												</div>
-												<div class='test-desc'>getSavingsAccountDetails</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:12</td>
-																	<td class='step-details'>Savings account details displayed successfully!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='fbef2bb0-ad86-4d8b-92c8-4075f8663236'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::transferFunds </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:12</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+859ms</span>
-												</div>
-												<div class='test-desc'>transferFunds</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:14</td>
-																	<td class='step-details'>Funds transferred successfully!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='57a77f22-0bc9-4dd2-8c02-06a6f3750558'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::verifyAccountWithInvalidAccountDetails </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:16</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+728ms</span>
-												</div>
-												<div class='test-desc'>verifyAccountWithInvalidAccountDetails</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:16</td>
-																	<td class='step-details'>Invalid account detail!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='f5ca993e-f1c2-4df4-9e43-d8ab8a48130a'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::verifyLoginWithInvalidCredentials </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:16</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:17</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+746ms</span>
-												</div>
-												<div class='test-desc'>verifyLoginWithInvalidCredentials</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:17</td>
-																	<td class='step-details'>Token generation failed!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='41d716df-3eb2-488a-8d7e-3fac86f633e2'>
-											<div class='test-head'>
-												<span class='test-name'>TestFireTest::logout </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-26 11:29:17</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-26 11:29:19</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+369ms</span>
-												</div>
-												<div class='test-desc'>logout</div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>11:29:19</td>
-																	<td class='step-details'>Logged out successfully!</td>
+																	<td class='timestamp'>20:24:42</td>
+																	<td class='step-details'>Items retrieved from Cart successfully!</td>
 																</tr>
 														</tbody>
 													</table>

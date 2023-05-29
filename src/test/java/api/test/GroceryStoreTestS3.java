@@ -3,34 +3,39 @@ package api.test;
 import api.endpoints.GroceryStoreEndpoints;
 import api.reports.ExternalReport;
 import com.aventstack.extentreports.ExtentReports;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 
 public class GroceryStoreTestS3 extends ExternalReport {
-    @Test(priority = 1)
+    @Test(priority = 11)
     public void getAProduct() throws FileNotFoundException {
         GroceryStoreEndpoints.getAProduct();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 12, dependsOnMethods = "getAProduct")
     public void createNewCart() throws FileNotFoundException {
         GroceryStoreEndpoints.createNewCart();
 
     }
-    @Test(priority = 3)
+
+    @Test(priority = 13, dependsOnMethods = "createNewCart")
     public void addAnItemToCart() throws FileNotFoundException {
         GroceryStoreEndpoints.addAnItemToCart();
 
     }
-    @Test(priority = 4)
+
+    @Test(priority = 14, dependsOnMethods = "addAnItemToCart")
     public void replaceCartItem() throws FileNotFoundException {
         GroceryStoreEndpoints.replaceCartItem();
 
     }
-    @Test(priority = 5)
+
+    @Test(priority = 15, dependsOnMethods = "replaceCartItem")
     public void getCartItems() throws FileNotFoundException {
         GroceryStoreEndpoints.getCartItems();
+        Assert.assertEquals(GroceryStoreEndpoints.quantity.contains("2"), true);
 
     }
 

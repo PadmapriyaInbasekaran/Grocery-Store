@@ -36,6 +36,11 @@
       <version>5.3.0</version>
       <!--            <scope>test</scope>-->
     </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>json-schema-validator</artifactId>
+      <version>5.3.0</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
     <dependency>
@@ -101,15 +106,6 @@
           <configuration>
             <source>1.8</source>
             <target>1.8</target>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <compilerArgs>
-              <arg>--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-            </compilerArgs>
           </configuration>
         </plugin>
       </plugins>

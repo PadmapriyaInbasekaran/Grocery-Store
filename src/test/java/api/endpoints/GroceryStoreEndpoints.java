@@ -9,6 +9,7 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -16,6 +17,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
 import static io.restassured.RestAssured.given;
 
 public class GroceryStoreEndpoints extends ExternalReport {
@@ -23,13 +25,13 @@ public class GroceryStoreEndpoints extends ExternalReport {
     public static ResponseLoggingFilter responseLoggingFilter;
     public static String accessToken;
     public static String cartId;
-    public static  List<Integer>  productIds;
+    public static List<Integer> productIds;
     public static String itemId;
     public static String orderId;
     public static GroceryStorePOJO data;
     public static String response;
     public static String comment;
-    public static String cartQuantity;
+    public static String quantity;
     public static String productId;
     public static String productId1;
     public static String productId2;
@@ -69,16 +71,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .when()
                 .get(Constants.get_products).asString();
         JSONArray jsonArray = new JSONArray(response);
-//        StringBuilder idsBuilder = new StringBuilder();
-//        for (int i = 0; i < jsonArray.length(); i++) {
-//            JSONObject item = jsonArray.getJSONObject(i);
-//            int id = item.getInt("id");
-//            idsBuilder.append(id).append("\n");
-//        }
-//        productIds = idsBuilder.toString();
-//        test.log(LogStatus.INFO, "All products fetched successfully!");
-//    }
-         productIds = new ArrayList<>();
+        productIds = new ArrayList<>();
 
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject item = jsonArray.getJSONObject(i);
@@ -86,13 +79,12 @@ public class GroceryStoreEndpoints extends ExternalReport {
             productIds.add(idOfProduct);
         }
         if (productIds.size() >= 2) {
-             productId1 = String.valueOf(productIds.get(0));
-             productId2 = String.valueOf(productIds.get(1));
-
-            // Pass the two product IDs to the other function
-
+            productId1 = String.valueOf(productIds.get(0));
+            productId2 = String.valueOf(productIds.get(1));
         }
+        test.log(LogStatus.INFO, "All products listed successfully!");
     }
+
     public static int getFirstProduct() throws FileNotFoundException {
 
         OutputStream outputStream = new FileOutputStream(Constants.listAProducts_file_path); //use your OutputStream that will write where you need it
@@ -111,7 +103,9 @@ public class GroceryStoreEndpoints extends ExternalReport {
             JSONObject firstItem = jsonArray.getJSONObject(0);
             return firstItem.getInt("id");
         }
+        test.log(LogStatus.INFO, "First product retrieved successfully!");
         return 0;
+
     }
 
 
@@ -122,13 +116,14 @@ public class GroceryStoreEndpoints extends ExternalReport {
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
-       productId = given()
+        productId = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
                 .pathParam("productId", getFirstProduct())
                 .when()
                 .get(Constants.get_product).jsonPath().getString("id");
+        test.log(LogStatus.INFO, "Product retrieved successfully!");
 
     }
 
@@ -185,9 +180,9 @@ public class GroceryStoreEndpoints extends ExternalReport {
                     .jsonPath()
                     .getString("itemId");
         } else {
-            // Handle the case when less than two product IDs are available
             System.out.println("Insufficient product IDs to add items to cart.");
         }
+        test.log(LogStatus.INFO, "Items added to cart successfully!");
     }
 
     public static void addAnItemToCart() throws FileNotFoundException {
@@ -198,7 +193,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
         data.setProductId(productId);
-        itemId =   given()
+        itemId = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
@@ -206,7 +201,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .body(data)
                 .when()
                 .post(Constants.addItemsToCart).jsonPath().getString("itemId");
-        test.log(LogStatus.INFO, "Items Added To Cart successfully!");
+        test.log(LogStatus.INFO, "Item Added To Cart successfully!");
     }
 
     public static void deleteCartItem() throws FileNotFoundException {
@@ -221,28 +216,29 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
                 .pathParam("cartId", cartId)
-                .pathParam("itemId",itemId)
+                .pathParam("itemId", itemId)
                 .when()
                 .delete(Constants.deleteCartItem);
         test.log(LogStatus.INFO, "Items deleted from Cart successfully!");
     }
 
-    public static void getCartItems() throws FileNotFoundException {
+    public static String getCartItems() throws FileNotFoundException {
 
         OutputStream outputStream = new FileOutputStream(Constants.getCartItems_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
-        String quantity = given()
+        quantity = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
                 .pathParam("cartId", cartId)
                 .when()
                 .get(Constants.getCartItems).jsonPath().getString("quantity");
-        //Assert.assertEquals(quantity.contains("2"),true);
+
         test.log(LogStatus.INFO, "Items retrieved from Cart successfully!");
+        return quantity;
     }
 
     public static void replaceCartItem() throws FileNotFoundException {
@@ -253,18 +249,19 @@ public class GroceryStoreEndpoints extends ExternalReport {
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
         data.setProductId(productId);
-        data.setQuantity("2");
+        data.setQuantity(locationPath.getProperty("cartQuantity"));
         given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
                 .pathParam("cartId", cartId)
-                .pathParam("itemId",itemId)
+                .pathParam("itemId", itemId)
                 .body(data)
                 .when()
                 .put(Constants.updateCartItem);
-        test.log(LogStatus.INFO, "Items updated in Cart successfully!");
+        test.log(LogStatus.INFO, "Item updated in Cart successfully!");
     }
+
     public static void createOrder() throws FileNotFoundException {
 
         OutputStream outputStream = new FileOutputStream(Constants.createOrder_file_path); //use your OutputStream that will write where you need it
@@ -278,7 +275,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
-                 .header("Authorization","Bearer "+accessToken)
+                .header("Authorization", "Bearer " + accessToken)
                 .body(data)
                 .when()
                 .post(Constants.createOrder).jsonPath().getString("orderId");
@@ -296,10 +293,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
-                .header("Authorization",accessToken)
+                .header("Authorization", accessToken)
                 .when()
                 .get(Constants.createOrder);
-        test.log(LogStatus.INFO, "Order retrieved successfully!");
+        test.log(LogStatus.INFO, "Orders retrieved successfully!");
     }
 
     public static void updateAnOrder() throws FileNotFoundException {
@@ -309,13 +306,13 @@ public class GroceryStoreEndpoints extends ExternalReport {
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
-        data.setComment("Commented by xyz!");
+        data.setComment(locationPath.getProperty("userComment"));
         given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
-                .pathParam("orderId",orderId)
-                .header("Authorization",accessToken)
+                .pathParam("orderId", orderId)
+                .header("Authorization", accessToken)
                 .when()
                 .body(data)
                 .patch(Constants.updateOrder);
@@ -333,11 +330,11 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
-                .header("Authorization",accessToken)
-                .pathParam("orderId",orderId)
+                .header("Authorization", accessToken)
+                .pathParam("orderId", orderId)
                 .when()
                 .get(Constants.getAOrder).jsonPath().getString("comment");
-        Assert.assertEquals(comment.contains("Commented by xyz!"),true);
+        Assert.assertEquals(comment.contains("Commented by xyz!"), true);
         test.log(LogStatus.INFO, "Order retrieved successfully!");
     }
 

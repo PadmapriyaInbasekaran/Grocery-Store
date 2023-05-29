@@ -21,14 +21,8 @@ public class PropertiesClass {
             System.out.println("Input Output Exception " + e.getMessage());
 
         }
-        // Generate a random email
         String randomEmail = generateRandomEmail();
-
-        // Set the random email value in the properties object
         properties.setProperty("clientEmail", randomEmail);
-
-        // Save the updated properties to the file
-        // ...
         return properties;
     }
 
@@ -38,4 +32,4 @@ public class PropertiesClass {
     }
 
 
-    }
+}

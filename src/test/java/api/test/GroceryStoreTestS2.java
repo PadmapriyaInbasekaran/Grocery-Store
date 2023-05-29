@@ -8,13 +8,13 @@ import java.io.FileNotFoundException;
 
 public class GroceryStoreTestS2 extends ExternalReport {
 
-    @Test(priority = 1)
+    @Test(priority = 6)
     public void createToken() throws FileNotFoundException {
         GroceryStoreEndpoints.createToken();
     }
 
 
-    @Test(priority = 2, dependsOnMethods = "createToken")
+    @Test(priority = 7, dependsOnMethods = "createToken")
     public void createOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.createNewCart();
         GroceryStoreEndpoints.getAProduct();
@@ -23,20 +23,20 @@ public class GroceryStoreTestS2 extends ExternalReport {
 
     }
 
-    @Test(priority = 3, dependsOnMethods = "createOrder")
+    @Test(priority = 8, dependsOnMethods = "createOrder")
     public void getAllOrders() throws FileNotFoundException {
         GroceryStoreEndpoints.getAllOrders();
 
     }
 
-    @Test(priority = 4, dependsOnMethods = "getAllOrders")
+    @Test(priority = 9, dependsOnMethods = "getAllOrders")
     public void updateAnOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.updateAnOrder();
 
     }
 
 
-    @Test(priority = 5, dependsOnMethods ="updateAnOrder" )
+    @Test(priority = 10, dependsOnMethods = "updateAnOrder")
     public void getAOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.getAOrder();
 

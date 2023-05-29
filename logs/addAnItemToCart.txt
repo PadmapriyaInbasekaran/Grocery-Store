@@ -1,30 +1,39 @@
 Request method:	POST
-Request URI:	http://simple-grocery-store-api.online/carts/ZjNPbe_mUk7lDZe2o-5rP/items
+Request URI:	http://simple-grocery-store-api.online/carts/pMcowXKeWg-DNwCcfErVD/items
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	cartId=ZjNPbe_mUk7lDZe2o-5rP
+Path params:	cartId=pMcowXKeWg-DNwCcfErVD
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "productId": "4643"
+    "cartId": null,
+    "clientName": null,
+    "clientEmail": null,
+    "category": null,
+    "productId": "4643",
+    "quantity": null,
+    "customerName": null,
+    "comment": null,
+    "id": null,
+    "authorization": null
 }
 HTTP/1.1 201 Created
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1M0HTK2CVY9VRKCQMB4V6XW-bom
-date: Mon, 29 May 2023 15:03:15 GMT
+fly-request-id: 01H1M9PSRB7JVPX64R0QBKB5AC-bom
+date: Mon, 29 May 2023 17:43:15 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"23-LgDhE5ga3QSfdNwiC+KtfRRs5Jw"
+etag: W/"23-rbvgcU2+PWkigMFI2rhNifZcN14"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
     "created": true,
-    "itemId": 714631572
+    "itemId": 374475695
 }

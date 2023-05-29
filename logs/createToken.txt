@@ -11,20 +11,28 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
+    "cartId": null,
     "clientName": "Postman on Valentin's computer",
-    "clientEmail": "random9e43d5ac@example.com"
+    "clientEmail": "randoma52a4f39@example.com",
+    "category": null,
+    "productId": null,
+    "quantity": null,
+    "customerName": null,
+    "comment": null,
+    "id": null,
+    "authorization": null
 }
 HTTP/1.1 201 Created
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1M0DJTPRJP3FBW8V3P3GCC1-bom
-date: Mon, 29 May 2023 15:00:56 GMT
+fly-request-id: 01H1M9PHC4VFGW6CF765SRPVRH-bom
+date: Mon, 29 May 2023 17:43:06 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"52-OiWGEdzcnHeTOXZNiELRDwofNkI"
+etag: W/"52-IEU83dvERnRkgjk+bil2bqleZRg"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
-    "accessToken": "5be15567c7b299b98a5bee0320389fbd62a4513033ede87049cae3f9b086f5d2"
+    "accessToken": "93d6e7c3f954ce3966a715d879a846577f1c377aaabd9451de228067bda78240"
 }

@@ -17,7 +17,7 @@ public class ExternalReport {
     @BeforeSuite
     public void beforeSuite() {
         String USER_DIRECTORY = System.getProperty("user.dir");
-        String extentPath = USER_DIRECTORY + File.separator + "test-output" + File.separator + "TestFireAPI.html";
+        String extentPath = USER_DIRECTORY + File.separator + "test-output" + File.separator + "GroceryStoreAPI.html";
         extent = new ExtentReports(extentPath);
     }
 

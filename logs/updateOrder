@@ -1,22 +1,31 @@
 Request method:	PATCH
-Request URI:	http://simple-grocery-store-api.online/orders/KOJ9Pnigx57wQwmTX9141
+Request URI:	http://simple-grocery-store-api.online/orders/DFisd76j1d2sFATUxkyKa
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	orderId=KOJ9Pnigx57wQwmTX9141
-Headers:		Authorization=5be15567c7b299b98a5bee0320389fbd62a4513033ede87049cae3f9b086f5d2
+Path params:	orderId=DFisd76j1d2sFATUxkyKa
+Headers:		Authorization=93d6e7c3f954ce3966a715d879a846577f1c377aaabd9451de228067bda78240
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "comment": "Commented by xyz!"
+    "cartId": null,
+    "clientName": null,
+    "clientEmail": null,
+    "category": null,
+    "productId": null,
+    "quantity": null,
+    "customerName": null,
+    "comment": "Commented by xyz!",
+    "id": null,
+    "authorization": null
 }
 HTTP/1.1 204 No Content
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1M0DS94FKRCRD8T7VGYX112-bom
-date: Mon, 29 May 2023 15:01:02 GMT
+fly-request-id: 01H1M9PPRT91CEKXQ425EGHMRK-bom
+date: Mon, 29 May 2023 17:43:12 GMT
 x-powered-by: Express
 via: 1.1 fly.io

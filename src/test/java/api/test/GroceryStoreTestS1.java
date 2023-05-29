@@ -8,36 +8,30 @@ import java.io.FileNotFoundException;
 public class GroceryStoreTestS1 extends ExternalReport {
 
     @Test(priority = 1)
-    public void createToken() throws FileNotFoundException {
-        GroceryStoreEndpoints.createToken();
-    }
-
-    @Test(priority = 2)
     public void listAllProducts() throws FileNotFoundException {
-
         GroceryStoreEndpoints.listAllProducts();
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void createNewCart() throws FileNotFoundException {
         GroceryStoreEndpoints.createNewCart();
 
     }
 
-    @Test(priority = 4)
+    @Test(priority = 3)
     public void addItemsToCart() throws FileNotFoundException {
         GroceryStoreEndpoints.addItemsToCart();
 
     }
 
-    @Test(priority = 5)
+    @Test(priority = 4)
     public void deleteCartItem() throws FileNotFoundException {
         GroceryStoreEndpoints.deleteCartItem();
 
     }
 
-    @Test(priority = 6)
+    @Test(priority = 5)
     public void getCartItems() throws FileNotFoundException {
         GroceryStoreEndpoints.getCartItems();
 

@@ -1,27 +1,19 @@
 Request method:	DELETE
-Request URI:	http://simple-grocery-store-api.online/carts/gFP2ryOYhDCeAzHfcPkiQ/items/4643
+Request URI:	http://simple-grocery-store-api.online/carts/trVwWNRFd977KRzH5ZQkv/items/157210838
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	cartId=gFP2ryOYhDCeAzHfcPkiQ
-				itemId=4643
+Path params:	cartId=trVwWNRFd977KRzH5ZQkv
+				itemId=157210838
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 404 Not Found
+HTTP/1.1 204 No Content
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1KVWMNPX1A9TV25Z79BRQW4-maa
-date: Mon, 29 May 2023 13:41:46 GMT
-content-type: application/json; charset=utf-8
+fly-request-id: 01H1M5HZP5J5584EV16TW26J03-bom
+date: Mon, 29 May 2023 16:30:43 GMT
 x-powered-by: Express
-etag: W/"21-FmQfArGt+inC+GtP+S4gypj+8WA"
-content-encoding: gzip
-transfer-encoding: chunked
 via: 1.1 fly.io
-
-{
-    "error": "No item with id 4643."
-}

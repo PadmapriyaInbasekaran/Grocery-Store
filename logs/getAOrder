@@ -1,11 +1,11 @@
 Request method:	GET
-Request URI:	http://simple-grocery-store-api.online/orders/qDN1cgJk4NZ8Opr7zLB17
+Request URI:	http://simple-grocery-store-api.online/orders/KOJ9Pnigx57wQwmTX9141
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	orderId=qDN1cgJk4NZ8Opr7zLB17
-Headers:		Authorization=2b9d04f15fdea4a2e1fa468df3b0776729ea58797539ca971cc629f957b6df1f
+Path params:	orderId=KOJ9Pnigx57wQwmTX9141
+Headers:		Authorization=5be15567c7b299b98a5bee0320389fbd62a4513033ede87049cae3f9b086f5d2
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -13,28 +13,28 @@ Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1KWZWJFQW8MZG5ZBQAWYKWP-maa
-date: Mon, 29 May 2023 14:01:01 GMT
+fly-request-id: 01H1M0DSXQT8E2P6BKWSGSV4FZ-bom
+date: Mon, 29 May 2023 15:01:03 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"12a-Tc18IozSvVgCAnHO6IhqnHpW5mQ"
+etag: W/"12a-WK16dMu84qhGu9xZbZATxjmq3No"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
-    "id": "qDN1cgJk4NZ8Opr7zLB17",
+    "id": "KOJ9Pnigx57wQwmTX9141",
     "items": [
         {
-            "id": 359763700,
+            "id": 333462117,
             "productId": 4643,
             "quantity": 1
         }
     ],
     "customerName": "xyz",
-    "createdBy": "b46e61b9cdc316343f2a725599d6936085291b54f45ce940551ed42140ebce81",
-    "created": "2023-05-29T14:00:59.618Z",
-    "timestamp": 1685368859618,
+    "createdBy": "c2cd0e8fb3403cdde298a13869e5f5658067821149505c409e70b5d27606fda5",
+    "created": "2023-05-29T15:01:00.664Z",
+    "timestamp": 1685372460664,
     "processed": false,
     "comment": "Commented by xyz!"
 }

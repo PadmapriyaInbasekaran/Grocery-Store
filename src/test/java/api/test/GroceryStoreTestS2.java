@@ -14,7 +14,7 @@ public class GroceryStoreTestS2 extends ExternalReport {
     }
 
 
-    @Test(priority = 2)
+    @Test(priority = 2, dependsOnMethods = "createToken")
     public void createOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.createNewCart();
         GroceryStoreEndpoints.getAProduct();
@@ -23,20 +23,20 @@ public class GroceryStoreTestS2 extends ExternalReport {
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, dependsOnMethods = "createOrder")
     public void getAllOrders() throws FileNotFoundException {
         GroceryStoreEndpoints.getAllOrders();
 
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, dependsOnMethods = "getAllOrders")
     public void updateAnOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.updateAnOrder();
 
     }
 
 
-    @Test(priority = 5)
+    @Test(priority = 5, dependsOnMethods ="updateAnOrder" )
     public void getAOrder() throws FileNotFoundException {
         GroceryStoreEndpoints.getAOrder();
 

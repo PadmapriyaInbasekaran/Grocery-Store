@@ -268,7 +268,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
-        data.setCustomerName("xyz");
+        data.setCustomerName(locationPath.getProperty("customerName"));
         data.setCartId(cartId);
         orderId = given()
                 .filter(requestLoggingFilter)

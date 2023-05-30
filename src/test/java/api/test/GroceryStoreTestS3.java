@@ -1,14 +1,18 @@
 package api.test;
 
+import api.endpoints.Constants;
 import api.endpoints.GroceryStoreEndpoints;
 import api.reports.ExternalReport;
+import api.utilities.PropertiesClass;
 import com.aventstack.extentreports.ExtentReports;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
+import java.util.Properties;
 
 public class GroceryStoreTestS3 extends ExternalReport {
+    static Properties locationPath = PropertiesClass.readProperty(Constants.properties_file_path);
     @Test(priority = 11)
     public void getAProduct() throws FileNotFoundException {
         GroceryStoreEndpoints.getAProduct();
@@ -35,7 +39,7 @@ public class GroceryStoreTestS3 extends ExternalReport {
     @Test(priority = 15, dependsOnMethods = "replaceCartItem")
     public void getCartItems() throws FileNotFoundException {
         GroceryStoreEndpoints.getCartItems();
-        Assert.assertEquals(GroceryStoreEndpoints.quantity.contains("2"), true);
+        Assert.assertEquals(GroceryStoreEndpoints.quantity.contains(locationPath.getProperty("cartQuantity")), true);
 
     }
 

@@ -1,11 +1,11 @@
 Request method:	PUT
-Request URI:	http://simple-grocery-store-api.online/carts/OZrh0N1cGV2RSF2aElWy-/items/556940488
+Request URI:	http://simple-grocery-store-api.online/carts/elfdhdLsXz63W0ATazXAP/items/60878005
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	cartId=OZrh0N1cGV2RSF2aElWy-
-				itemId=556940488
+Path params:	cartId=elfdhdLsXz63W0ATazXAP
+				itemId=60878005
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -25,7 +25,7 @@ Body:
 }
 HTTP/1.1 204 No Content
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1NEK1K5CTGR2F1HFH4G7BC2-maa
-date: Tue, 30 May 2023 04:27:50 GMT
+fly-request-id: 01H1NH2FGA15KWJ3ABKX27KMJW-maa
+date: Tue, 30 May 2023 05:11:12 GMT
 x-powered-by: Express
 via: 1.1 fly.io

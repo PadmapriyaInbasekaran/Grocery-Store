@@ -6,14 +6,13 @@ import api.utilities.PropertiesClass;
 import com.relevantcodes.extentreports.LogStatus;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
+import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -289,13 +288,14 @@ public class GroceryStoreEndpoints extends ExternalReport {
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
         data = new GroceryStorePOJO();
-        given()
+        Response response = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
                 .contentType("application/json")
                 .header("Authorization", accessToken)
                 .when()
                 .get(Constants.createOrder);
+        response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(new File(Constants.schemaPath)));
         test.log(LogStatus.INFO, "Orders retrieved successfully!");
     }
 

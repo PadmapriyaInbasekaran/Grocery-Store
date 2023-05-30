@@ -1,6 +1,17 @@
 package api.payload;
 
 public class GroceryStorePOJO {
+
+    String cartId;
+    String clientName;
+    String clientEmail;
+    String category;
+    String productId;
+    String quantity;
+    String customerName;
+    String Authorization;
+    String comment;
+    String id;
     public String getCartId() {
         return cartId;
     }
@@ -8,9 +19,6 @@ public class GroceryStorePOJO {
     public void setCartId(String cartId) {
         this.cartId = cartId;
     }
-
-    String cartId;
-    String clientName;
 
     public String getClientName() {
         return clientName;
@@ -28,8 +36,6 @@ public class GroceryStorePOJO {
         this.clientEmail = clientEmail;
     }
 
-    String clientEmail;
-
     public String getProductId() {
         return productId;
     }
@@ -46,9 +52,6 @@ public class GroceryStorePOJO {
         this.category = category;
     }
 
-    String category;
-    String productId;
-
     public String getQuantity() {
         return quantity;
     }
@@ -56,8 +59,6 @@ public class GroceryStorePOJO {
     public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
-
-    String quantity;
 
     public String getCustomerName() {
         return customerName;
@@ -67,8 +68,6 @@ public class GroceryStorePOJO {
         this.customerName = customerName;
     }
 
-    String customerName;
-
     public String getAuthorization() {
         return Authorization;
     }
@@ -77,7 +76,6 @@ public class GroceryStorePOJO {
         this.Authorization = Authorization;
     }
 
-    String Authorization;
 
     public String getComment() {
         return comment;
@@ -87,8 +85,6 @@ public class GroceryStorePOJO {
         this.comment = comment;
     }
 
-    String comment;
-
     public String getId() {
         return id;
     }
@@ -96,8 +92,5 @@ public class GroceryStorePOJO {
     public void setId(String id) {
         this.id = id;
     }
-
-    String id;
-
 
 }

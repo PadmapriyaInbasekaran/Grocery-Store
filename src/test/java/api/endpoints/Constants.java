@@ -29,4 +29,5 @@ public class Constants {
     public static String updateOrder_file_path = "logs\\updateOrder";
     public static String getAOrder_file_path = "logs\\getAOrder";
     public static String getAOrder = base_url + "/orders/{orderId}";
+    public static String schemaPath = "src/test/resources/schema.json";
 }

@@ -5,18 +5,18 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer 5dd183f76a7d5d9b494c164e33119572a186ca6a6434a9423c4edfabbdbdc485
+Headers:		Authorization=Bearer a0e05358f0e172f0da8232aa95a63e09404faf9b9db70bba150bab4b8819efc9
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "cartId": "APiqy_mJj6o9RroZHf0G0",
-    "clientName": null,
-    "clientEmail": null,
+    "cartId": "yFjFws4huaqs_LNb2GqUa",
+    "clientName": "Postman on Valentin's computer",
+    "clientEmail": "random0e3b8a4c@example.com",
     "category": null,
-    "productId": null,
+    "productId": "4643",
     "quantity": null,
     "customerName": "xyz",
     "comment": null,
@@ -25,16 +25,16 @@ Body:
 }
 HTTP/1.1 201 Created
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1NJ004VP6J44MGT0RFA4H0H-maa
-date: Tue, 30 May 2023 05:27:20 GMT
+fly-request-id: 01H1NYQ7MKE8QAVRR808XKMBQG-maa
+date: Tue, 30 May 2023 09:09:44 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"32-1Z9QLexOe0jUthvv61vZwIpgpqQ"
+etag: W/"32-9ej/GPsRL4p3IRTJ1l4VhEmrF6w"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
     "created": true,
-    "orderId": "7PwR1XPJYQ-6dLYg5JbrI"
+    "orderId": "C8nYGuNsDTnMnbEeh4m4a"
 }

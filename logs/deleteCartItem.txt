@@ -1,11 +1,11 @@
 Request method:	DELETE
-Request URI:	http://simple-grocery-store-api.online/carts/7Fzprg5vOgdc1DkEeZNQh/items/952630794
+Request URI:	http://simple-grocery-store-api.online/carts/qOZT7M3jUGGfAw2an-nZW/items/256317661
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	cartId=7Fzprg5vOgdc1DkEeZNQh
-				itemId=952630794
+Path params:	cartId=qOZT7M3jUGGfAw2an-nZW
+				itemId=256317661
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -13,7 +13,7 @@ Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 204 No Content
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1NHZW9B0F5ZEAD9VWM4ZK0K-maa
-date: Tue, 30 May 2023 05:27:16 GMT
+fly-request-id: 01H1NYQ2R682ESH0N758FZZHHC-maa
+date: Tue, 30 May 2023 09:09:39 GMT
 x-powered-by: Express
 via: 1.1 fly.io

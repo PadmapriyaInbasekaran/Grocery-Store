@@ -27,7 +27,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
     public static List<Integer> productIds;
     public static String itemId;
     public static String orderId;
-    public static GroceryStorePOJO data;
+    public static GroceryStorePOJO data = new GroceryStorePOJO();;
     public static String response;
     public static String comment;
     public static String quantity;
@@ -39,11 +39,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void createToken() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.createToken_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.createToken_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         data.setClientName(locationPath.getProperty("clientName"));
         data.setClientEmail(locationPath.getProperty("clientEmail"));
         accessToken = given()
@@ -58,11 +57,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void listAllProducts() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.listAProducts_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.listAProducts_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         response = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -86,11 +84,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static int getFirstProduct() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.listAProducts_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.listAProducts_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         response = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -110,11 +107,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void getAProduct() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.getAProduct_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.getAProduct_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         productId = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -128,11 +124,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void createNewCart() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.CreateNewCart_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.CreateNewCart_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         cartId = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -144,11 +139,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void addItemsToCart() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.addItemsToCart_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.addItemsToCart_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         if (productIds.size() >= 2) {
             String productId1 = String.valueOf(productIds.get(0));
             String productId2 = String.valueOf(productIds.get(1));
@@ -186,11 +180,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void addAnItemToCart() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.addAnItemToCart_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.addAnItemToCart_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         data.setProductId(productId);
         itemId = given()
                 .filter(requestLoggingFilter)
@@ -205,11 +198,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void deleteCartItem() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.deleteCartItem_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.deleteCartItem_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -223,11 +215,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static String getCartItems() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.getCartItems_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.getCartItems_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         quantity = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -242,11 +233,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void replaceCartItem() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.replaceCartItem_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.replaceCartItem_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         data.setProductId(productId);
         data.setQuantity(locationPath.getProperty("cartQuantity"));
         given()
@@ -263,11 +253,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void createOrder() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.createOrder_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.createOrder_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         data.setCustomerName(locationPath.getProperty("customerName"));
         data.setCartId(cartId);
         orderId = given()
@@ -283,11 +272,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void getAllOrders() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.getAllOrders_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.getAllOrders_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         Response response = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)
@@ -301,11 +289,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void updateAnOrder() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.updateOrder_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.updateOrder_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         data.setComment(locationPath.getProperty("userComment"));
         given()
                 .filter(requestLoggingFilter)
@@ -321,11 +308,10 @@ public class GroceryStoreEndpoints extends ExternalReport {
 
     public static void getAOrder() throws FileNotFoundException {
 
-        OutputStream outputStream = new FileOutputStream(Constants.getAOrder_file_path); //use your OutputStream that will write where you need it
+        FileOutputStream outputStream = new FileOutputStream(Constants.getAOrder_file_path); //use your OutputStream that will write where you need it
         PrintStream printStream = new PrintStream(outputStream, true);
         requestLoggingFilter = new RequestLoggingFilter(printStream);
         responseLoggingFilter = new ResponseLoggingFilter(printStream);
-        data = new GroceryStorePOJO();
         comment = given()
                 .filter(requestLoggingFilter)
                 .filter(responseLoggingFilter)

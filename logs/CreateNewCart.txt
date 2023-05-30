@@ -12,16 +12,16 @@ Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 201 Created
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1NH2DXGTJ1J228BH19ABH2N-maa
-date: Tue, 30 May 2023 05:11:11 GMT
+fly-request-id: 01H1NJ03R3HZCG408X7VW3XGZF-maa
+date: Tue, 30 May 2023 05:27:23 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"31-emALOHLrYotrELjgoZxIN9+yFik"
+etag: W/"31-JH+DdGDwreip0YcZAW1LJOiOFOY"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
     "created": true,
-    "cartId": "elfdhdLsXz63W0ATazXAP"
+    "cartId": "QfP97OyqmGNGRVK-GR7b_"
 }

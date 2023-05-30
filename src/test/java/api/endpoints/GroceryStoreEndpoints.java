@@ -53,7 +53,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .body(data)
                 .when()
                 .post(Constants.generate_token).jsonPath().getString("accessToken");
-        test.log(LogStatus.INFO, "Token generated successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("tokenGenerationMessage"));
     }
 
     public static void listAllProducts() throws FileNotFoundException {
@@ -81,7 +81,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
             productId1 = String.valueOf(productIds.get(0));
             productId2 = String.valueOf(productIds.get(1));
         }
-        test.log(LogStatus.INFO, "All products listed successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("productsListedMessage"));
     }
 
     public static int getFirstProduct() throws FileNotFoundException {
@@ -102,7 +102,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
             JSONObject firstItem = jsonArray.getJSONObject(0);
             return firstItem.getInt("id");
         }
-        test.log(LogStatus.INFO, "First product retrieved successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("firstProductRetrievedMessage"));
         return 0;
 
     }
@@ -122,7 +122,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .pathParam("productId", getFirstProduct())
                 .when()
                 .get(Constants.get_product).jsonPath().getString("id");
-        test.log(LogStatus.INFO, "Product retrieved successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("singleProductRetrievedMessage"));
 
     }
 
@@ -139,7 +139,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .contentType("application/json")
                 .when()
                 .post(Constants.create_newCart).jsonPath().getString("cartId");
-        test.log(LogStatus.INFO, "Cart created successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("cartCreatedMessage"));
     }
 
     public static void addItemsToCart() throws FileNotFoundException {
@@ -179,9 +179,9 @@ public class GroceryStoreEndpoints extends ExternalReport {
                     .jsonPath()
                     .getString("itemId");
         } else {
-            System.out.println("Insufficient product IDs to add items to cart.");
+            System.out.println(locationPath.getProperty("insufficientProductMessage"));
         }
-        test.log(LogStatus.INFO, "Items added to cart successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("itemsAddedToCartMessage"));
     }
 
     public static void addAnItemToCart() throws FileNotFoundException {
@@ -200,7 +200,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .body(data)
                 .when()
                 .post(Constants.addItemsToCart).jsonPath().getString("itemId");
-        test.log(LogStatus.INFO, "Item Added To Cart successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("itemAddedToCartMessage"));
     }
 
     public static void deleteCartItem() throws FileNotFoundException {
@@ -218,7 +218,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .pathParam("itemId", itemId)
                 .when()
                 .delete(Constants.deleteCartItem);
-        test.log(LogStatus.INFO, "Items deleted from Cart successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("cartDeletedMessage"));
     }
 
     public static String getCartItems() throws FileNotFoundException {
@@ -236,7 +236,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .when()
                 .get(Constants.getCartItems).jsonPath().getString("quantity");
 
-        test.log(LogStatus.INFO, "Items retrieved from Cart successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("retrievedCartItemsMessage"));
         return quantity;
     }
 
@@ -258,7 +258,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .body(data)
                 .when()
                 .put(Constants.updateCartItem);
-        test.log(LogStatus.INFO, "Item updated in Cart successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("cartItemUpdatedMessage"));
     }
 
     public static void createOrder() throws FileNotFoundException {
@@ -278,7 +278,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .body(data)
                 .when()
                 .post(Constants.createOrder).jsonPath().getString("orderId");
-        test.log(LogStatus.INFO, "Order created successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("orderCreatedMessage"));
     }
 
     public static void getAllOrders() throws FileNotFoundException {
@@ -296,7 +296,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .when()
                 .get(Constants.createOrder);
         response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(new File(Constants.schemaPath)));
-        test.log(LogStatus.INFO, "Orders retrieved successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("retrieveAllOrdersMessage"));
     }
 
     public static void updateAnOrder() throws FileNotFoundException {
@@ -316,7 +316,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .when()
                 .body(data)
                 .patch(Constants.updateOrder);
-        test.log(LogStatus.INFO, "xyz commented successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("OrderUpdatedMessage"));
     }
 
     public static void getAOrder() throws FileNotFoundException {
@@ -335,7 +335,7 @@ public class GroceryStoreEndpoints extends ExternalReport {
                 .when()
                 .get(Constants.getAOrder).jsonPath().getString("comment");
         Assert.assertEquals(comment.contains("Commented by xyz!"), true);
-        test.log(LogStatus.INFO, "Order retrieved successfully!");
+        test.log(LogStatus.INFO, locationPath.getProperty("retrieveOrderMessage"));
     }
 
 

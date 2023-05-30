@@ -1,10 +1,10 @@
 Request method:	POST
-Request URI:	http://simple-grocery-store-api.online/carts/elfdhdLsXz63W0ATazXAP/items
+Request URI:	http://simple-grocery-store-api.online/carts/QfP97OyqmGNGRVK-GR7b_/items
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	cartId=elfdhdLsXz63W0ATazXAP
+Path params:	cartId=QfP97OyqmGNGRVK-GR7b_
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -24,16 +24,16 @@ Body:
 }
 HTTP/1.1 201 Created
 server: Fly/fe06e9419 (2023-05-24)
-fly-request-id: 01H1NH2EQEZCCBCJ8DRP97BRF9-maa
-date: Tue, 30 May 2023 05:11:11 GMT
+fly-request-id: 01H1NJ04FRCXJ3B16DWR9Y58ZA-maa
+date: Tue, 30 May 2023 05:27:24 GMT
 content-type: application/json; charset=utf-8
 x-powered-by: Express
-etag: W/"22-x88ToR/coMMKkuDdZzLS4hsEq7U"
+etag: W/"23-rL9BxGFu+80sZhjtu5G3QHMDSN4"
 content-encoding: gzip
 transfer-encoding: chunked
 via: 1.1 fly.io
 
 {
     "created": true,
-    "itemId": 60878005
+    "itemId": 168089370
 }
